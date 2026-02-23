@@ -1,2 +1,6 @@
 flask
+<<<<<<< HEAD
 pytest
+=======
+pytest
+>>>>>>> d4b82e5f4211e89b23bcf1cb6db449781b88bf69
