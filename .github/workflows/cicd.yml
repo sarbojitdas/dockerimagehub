@@ -34,7 +34,7 @@ jobs:
       - name: Run tests
         run: pytest
 
-  build-and-publish:
+   build-and-publish:
     needs: build-and-test
     runs-on: ubuntu-latest
 
@@ -52,8 +52,8 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v4
         with:
-          context: .
-          file: ./Dockerfile
+          context: ./dockerimage
+          file: ./dockerimage/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/flasktest-app:latest
 
